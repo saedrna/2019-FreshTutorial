@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>imges/Hello.png</file>
+        <file>fonts/wqy-microhei.ttc</file>
+    </qresource>
+</RCC>

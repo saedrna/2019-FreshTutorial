@@ -1,0 +1,3 @@
+/d/repo/2019-tutorial/abi/build-gcc/CMakeFiles/rebuild_cache.dir
+/d/repo/2019-tutorial/abi/build-gcc/CMakeFiles/main.dir
+/d/repo/2019-tutorial/abi/build-gcc/CMakeFiles/edit_cache.dir
