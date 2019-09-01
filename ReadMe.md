@@ -53,7 +53,7 @@
 - TODO: 修改 ```h2o.cmake applocal.ps1 qtdeploy.ps1``` 等文件，使自动编译可以支持对 qt plugin 的拷贝，目录结构为 ```plugins/platforms``` 等等，参考[vcpkg](https://github.com/microsoft/vcpkg/blob/master/scripts/buildsystems/vcpkg.cmake)
 
 ## OSketch 开发教程
-- 下载[插件源码和SDK](https://pan.baidu.com/s/1f31iTTL1yW6yEUHpI0s0oQ)
+- 下载[插件源码和SDK](https://pan.baidu.com/s/162Q3eNI88vPPnic_o8icpA)
 - 根据 OSketchProPlugin 的教程完成插件配置
 - 添加一个 hello world 插件
 - 注册并且添加一个简单的工具类
