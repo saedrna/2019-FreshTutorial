@@ -36,8 +36,9 @@
 
 # 基于 CMake 的 C++ 项目管理方法：以 OSketch 插件开发为例
 ## 为什么要采用 CMake 来管理 C++ 代码？
+- 更方便的管理第三方库依赖
 - 文本管理，更简洁，可跟踪改变
-- 通过阅读代码，可更好的知道发生了什么
+- 通过阅读代码，可更好的知道发生了什么，更重要的是可以不用知道我需要知道什么
 - 更方便支持批量化修改，适合较大工程开发
 
 ## CMake step-by-step
@@ -49,9 +50,10 @@
   - 创建翻译文件
 - 创建一个库文件
 - 查找第三方库
+- TODO: 修改 ```h2o.cmake applocal.ps1 qtdeploy.ps1``` 等文件，使自动编译可以支持对 qt plugin 的拷贝，目录结构为 ```plugins/platforms``` 等等，参考[vcpkg](https://github.com/microsoft/vcpkg/blob/master/scripts/buildsystems/vcpkg.cmake)
 
 ## OSketch 开发教程
-- 下载[插件源码和SDK](https://pan.baidu.com/s/1f31iTTL1yW6yEUHpI0s0oQ)
+- 下载[插件源码和SDK](https://pan.baidu.com/s/162Q3eNI88vPPnic_o8icpA)
 - 根据 OSketchProPlugin 的教程完成插件配置
 - 添加一个 hello world 插件
 - 注册并且添加一个简单的工具类
