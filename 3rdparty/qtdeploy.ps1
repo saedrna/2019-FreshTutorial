@@ -26,11 +26,11 @@ function deployPluginsIfQt([string]$targetBinaryDir, [string]$QtPluginsDir, [str
     }
 
     # We detect Qt modules in use via the DLLs themselves. See qtModuleEntries in Qt to find the mapping.
-    if ($targetBinaryName -match "Qt5Cored?.dll") {
+    if ($targetBinaryName -like "Qt5Core*.dll") {
         if (!(Test-Path "$targetBinaryDir\qt.conf")) {
             "[Paths]" | Out-File -encoding ascii "$targetBinaryDir\qt.conf"
         }
-    } elseif ($targetBinaryName -match "Qt5Guid?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Gui*.dll") {
         Write-Verbose "  Deploying platforms"
         New-Item "$targetBinaryDir\plugins\platforms" -ItemType Directory -ErrorAction SilentlyContinue | Out-Null
         Get-ChildItem "$QtPluginsDir\platforms\qwindows*.dll" | % {
@@ -41,22 +41,22 @@ function deployPluginsIfQt([string]$targetBinaryDir, [string]$QtPluginsDir, [str
         deployPlugins "imageformats"
         deployPlugins "iconengines"
         deployPlugins "platforminputcontexts"
-    } elseif ($targetBinaryName -match "Qt5Networkd?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Network*.dll") {
         deployPlugins "bearer"
         if (Test-Path "$binDir\libeay32.dll")
         {
             deployBinary "$targetBinaryDir" "$binDir" "libeay32.dll"
             deployBinary "$targetBinaryDir" "$binDir" "ssleay32.dll"
         }
-    } elseif ($targetBinaryName -match "Qt5Sqld?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Sql*.dll") {
         deployPlugins "sqldrivers"
-    } elseif ($targetBinaryName -match "Qt5Multimediad?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Multimedia*.dll") {
         deployPlugins "audio"
         deployPlugins "mediaservice"
         deployPlugins "playlistformats"
-    } elseif ($targetBinaryName -match "Qt5PrintSupportd?.dll") {
+    } elseif ($targetBinaryName -like "Qt5PrintSupport*.dll") {
         deployPlugins "printsupport"
-    } elseif ($targetBinaryName -match "Qt5Qmld?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Qml*.dll") {
         if(!(Test-Path "$targetBinaryDir\qml"))
         {
             if (Test-Path "$binDir\..\qml") {
@@ -67,7 +67,7 @@ function deployPluginsIfQt([string]$targetBinaryDir, [string]$QtPluginsDir, [str
                 throw "FAILED"
             }
         }
-    } elseif ($targetBinaryName -match "Qt5Quickd?.dll") {
+    } elseif ($targetBinaryName -like "Qt5Quick*.dll") {
         foreach ($a in @("Qt5QuickControls2", "Qt5QuickControls2d", "Qt5QuickTemplates2", "Qt5QuickTemplates2d"))
         {
             if (Test-Path "$binDir\$a.dll")
