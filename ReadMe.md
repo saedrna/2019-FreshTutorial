@@ -58,7 +58,7 @@
 - 添加一个 hello world 插件
 - 注册并且添加一个简单的工具类
   - 本示例将实现一个工具类，其功能为：将选中的平面进行高亮，将鼠标置于平面上时会在光标旁显示平面面积，单位为平方米。
-  - 在上一步中添加的hello world 插件中，添加一个源文件[tool_area.cpp](osketch-tutorial\oksetchpro_plugin_helloworld\tool_area.cpp)， 和一个头文件[tool_area.h](osketch-tutorial\oksetchpro_plugin_helloworld\tool_area.h)。在编译时，由于其文件名以“tool”开头，这两个文件将被放入解决方案中的Tool Files目录下。代码的运行原理和相关注释请参见代码，部分[ruby接口](https://github.com/ruby/ruby/blob/master/doc/extension.rdoc)可点击进行查阅。
+  - 在上一步中添加的hello world 插件中，添加一个源文件[tool_area.cpp](osketch-tutorial/oksetchpro_plugin_helloworld/tool_area.cpp)， 和一个头文件[tool_area.h](osketch-tutorial/oksetchpro_plugin_helloworld/tool_area.h)。在编译时，由于其文件名以“tool”开头，这两个文件将被放入解决方案中的Tool Files目录下。代码的运行原理和相关注释请参见代码，部分[ruby接口](https://github.com/ruby/ruby/blob/master/doc/extension.rdoc)可点击进行查阅。
   - 本工具的运行原理为：在打开项目时将该工具进行注册，然后在HelloWold插件下的窗口弹出时点击按钮激活，将选中的平面高亮。
   - 在 ```osketchpro_plugin_helloworld.h``` 中添加一个```post_project_open()``` 函数，该函数为打开项目时所运行的函数。
     ![post_project_open](images/post_project_open.PNG)
