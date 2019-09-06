@@ -61,11 +61,11 @@
   - 在上一步中添加的hello world 插件中，添加一个源文件[tool_area.cpp](osketch-tutorial\oksetchpro_plugin_helloworld\tool_area.cpp)， 和一个头文件[tool_area.h](osketch-tutorial\oksetchpro_plugin_helloworld\tool_area.h)。在编译时，由于其文件名以“tool”开头，这两个文件将被放入解决方案中的Tool Files目录下。代码的运行原理和相关注释请参见代码，部分[ruby接口](https://github.com/ruby/ruby/blob/master/doc/extension.rdoc)可点击进行查阅。
   - 本工具的运行原理为：在打开项目时将该工具进行注册，然后在HelloWold插件下的窗口弹出时点击按钮激活，将选中的平面高亮。
   - 在 ```osketchpro_plugin_helloworld.h``` 中添加一个```post_project_open()``` 函数，该函数为打开项目时所运行的函数。
-  ![post_project_open](images/post_project_open.png)
+    ![post_project_open](images/post_project_open.png)
   - 在```osketchpro_plugin_helloworld.cpp``` 中对```post_project_open()```进行调用，并在该函数中对工具进行注册。
-  ![register](images/register.png)
+    ![register](images/register.png)
   - 在将工具类注册以后，需要对其进行激活。在```widget_hello_world.cpp``` 下，使用```set_active_tool```对已经注册好的工具进行激活。
-  ![active](images/active.png)
+    ![active](images/active.png)
   - 最终运行效果如下图所示。
     ![toolresult](images/toolresult.png)
 
