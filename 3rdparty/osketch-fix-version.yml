@@ -56,7 +56,7 @@ dependencies:
   - libflang=5.0.0=h6538335_20180525
   - libgdal=2.4.1=ha925a31_1000
   - libiconv=1.15=hfa6e2cd_1005
-  - libjpeg-turbo=2.0.3=hfa6e2cd_0
+  - libjpeg-turbo=2.0.3=hfa6e2cd_1
   - libkml=1.3.0=he5f2a48_4
   - liblapack=3.8.0=12_openblas
   - liblapacke=3.8.0=12_openblas
@@ -83,7 +83,7 @@ dependencies:
   - openexr=2.3.0=h1a24767_1000
   - openimageio=2.0.7=hc621d5b_1000
   - openmp=5.0.0=vc14_1
-  - openmvg=1.4=h3a71b82_1000
+  - openmvg=1.5=h3a71b82_1000
   - openscenegraph=3.4.1=he1a9056_1000
   - openssl=1.1.1c=hfa6e2cd_0
   - osi=0.108.3=ha925a31_1000
