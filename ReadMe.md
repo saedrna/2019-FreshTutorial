@@ -150,7 +150,7 @@
     dialog.show();
 
     return app.exec();
-}
+    }
     
     ```
     
@@ -192,7 +192,7 @@
       COMMAND ${CMAKE_COMMAND} -E copy ${QM_FILES}
               "$<TARGET_FILE_DIR:main>/resources/"
       COMMENT "Copying translation files to $<TARGET_FILE_DIR:main>/resources/"
-     )                                   
+      )                                   
       ```
      
 
