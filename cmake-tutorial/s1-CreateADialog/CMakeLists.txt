@@ -22,7 +22,7 @@ endif(MSVC)
 set(CMAKE_MODULE_PATH "${CMAKE_MODULE_PATH};${CMAKE_CURRENT_LIST_DIR}/cmake")
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
-set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOUIC ON) #用于编译资源信息
 
 
 ######################################################################
@@ -34,7 +34,7 @@ set(CMAKE_AUTOUIC ON)
 # https://doc.qt.io/qt-5/cmake-manual.html
 find_package(Qt5 COMPONENTS Core Gui Widgets LinguistTools REQUIRED)
 include(Qt5LinguistToolsMacrosNoInclude)
-
+#find_package 获取QT5中的Core、Gui等组件
 ######################################################################
 #
 # Add executibles
@@ -56,11 +56,11 @@ qt5_create_translation_no_include(QM_FILES
                                   OPTIONS
                                   -locations
                                   relative)
-
+#以上为各类不同的文件进行打包和整理，再通过下一步的add_executable将其全部添加到main之中。
 add_executable(main ${SOURCES} ${SOURCES_QT} ${QM_FILES} ${TS_FILES})
 
 target_link_libraries(main Qt5::Core Qt5::Widgets Qt5::Gui)
-
+#将上文中查找到的Qt的组件进行连接
 add_custom_command(
   TARGET main POST_BUILD
   COMMAND ${CMAKE_COMMAND} -E make_directory

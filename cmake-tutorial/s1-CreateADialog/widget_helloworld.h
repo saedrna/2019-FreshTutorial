@@ -1,4 +1,4 @@
-#pragma once
+#pragma once    //会让所在的文件在一个单独的编译中只被包含一次
 
 #include "ui_widget_helloworld.h"
 

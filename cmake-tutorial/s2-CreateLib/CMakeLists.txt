@@ -49,5 +49,6 @@ include(Qt5LinguistToolsMacrosNoInclude)
 #
 ######################################################################
 
-include_directories(${CMAKE_CURRENT_LIST_DIR}/src)
+include_directories(${CMAKE_CURRENT_LIST_DIR}/src)   
 add_subdirectory(src)
+#连接到src文件夹下，通过src下的cmakelists文件进行进一步处理
