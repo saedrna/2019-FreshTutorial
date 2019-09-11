@@ -64,7 +64,12 @@ VALUE ToolArea::draw(VALUE view) {
   :color => "DeepPink",
   :align => TextAlignRight
 })");
-        double area = rb_funcall(face, rb_intern("area"), 0);
+        //通过下面这行获取到的平面面积值格式为ruby下的Value类型。直接转为double进行输出，会出现乱码和
+        //数值异常的情况，需要进行转化
+        //double area = rb_funcall(face, rb_intern("area"), 0);
+        value rb_area = rb_funcall(face, rb_intern("area"), 0);
+        double area=NUM2DBL(rb_area)* INCH_2_METER * INCH_2_METER;
+        //NUM2DBL可将value形式的变量转换为double。sketchup默认单位为英寸，需进行单位转化，1英寸=0.0254米
         VALUE text = su_string(QObject::tr("Face Area [%1]").arg(QString::number(area)).toStdString());
         rb_funcall(view, rb_intern("draw_text"), 3, point, text, options);
         return Qnil;

@@ -40,7 +40,7 @@
 #   the path to the Eigen3 library
 
 find_path(Eigen3_INCLUDE_DIR signature_of_eigen3_matrix_library)
-
+#寻找包含 signature_of_eigen3_matrix_library 的路径
 include(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(Eigen3
                                   REQUIRED_VARS Eigen3_INCLUDE_DIR
@@ -54,6 +54,7 @@ if(Eigen3_FOUND)
     if(Eigen3_INCLUDE_DIRS)
       set_target_properties(Eigen3::Eigen3 PROPERTIES
         INTERFACE_INCLUDE_DIRECTORIES "${Eigen3_INCLUDE_DIRS}")
+        #只要程序中引用了Eigen3，就将相应的包含目录添加进去
     endif()
   endif()
 endif()
