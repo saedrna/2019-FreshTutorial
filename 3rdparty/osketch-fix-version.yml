@@ -9,15 +9,15 @@ dependencies:
   - assimp=4.1.0=h200bbdf_1000
   - blas=2.12=openblas
   - boost-cpp=1.69.0=ha925a31_1000
-  - ca-certificates=2019.6.16=hecc5488_0
+  - bzip2=1.0.8=hfa6e2cd_1
+  - ca-certificates=2019.9.11=hecc5488_0
   - capstone=4.0.1=ha925a31_1000
   - catch2=2.7.2=ha925a31_1000
+  - cbc=2.10.3=hd5242e6_1000
   - cereal=1.2.2=ha925a31_1000
   - ceres-solver=1.14.0=ha925a31_1001
   - cgal-cpp=4.14=h6171541_1001
-  - clp=1.17.1=ha925a31_1000
   - cmake=3.15.3=he025d50_0
-  - coinutils=2.11.1=ha925a31_1000
   - curl=7.65.3=h4496350_0
   - eigen=3.3.7=he980bc4_1000
   - embree3=3.2.0=h1ad3211_0
@@ -39,8 +39,8 @@ dependencies:
   - icu=64.2=he025d50_1
   - ilmbase=2.3.0=h1a1b453_1001
   - intelpython=2018.0.3=0
-  - ipp-include=2019.4=intel_245
-  - ipp-static=2019.4=intel_245
+  - ipp-include=2019.5=intel_281
+  - ipp-static=2019.5=intel_281
   - jpeg=9c=hfa6e2cd_1001
   - jsoncpp=1.8.4=h1ad3211_1001
   - khronos-opencl-icd-loader=2019.02.20=h80797a5_1
@@ -86,7 +86,6 @@ dependencies:
   - openmvg=1.5=h3a71b82_1000
   - openscenegraph=3.4.1=he1a9056_1000
   - openssl=1.1.1c=hfa6e2cd_0
-  - osi=0.108.3=ha925a31_1000
   - pcl=1.9.1=he5b7a3e_1002
   - pdal=1.9.1=h6f54046_1001
   - postgresql=11.5=h06f7779_1
@@ -97,7 +96,7 @@ dependencies:
   - suitesparse=5.1.2=h33f27b4_1000
   - tbb=2019_U5=ha925a31_1000
   - tcl=8.6.4=vc14_intel_3
-  - tk=8.6.9=hfa6e2cd_1002
+  - tk=8.6.9=hfa6e2cd_1003
   - vc=14.1=h0510ff6_4
   - viennacl=1.7.1=ha925a31_1000
   - vs2015_runtime=14.16.27012=hf0eaf9b_0
