@@ -1,10 +1,8 @@
 mkdir build
 cd build
 
-pushd %VS2017INSTALLDIR%
-call VC\Auxiliary\Build\vcvars64.bat
-popd
+cmake -G "Visual Studio 16 2019" -A x64 -T host=x64 ../
+if errorlevel 1 exit 1
 
-cmake -GNinja ../
-
-ninja
+cmake --build . --target ALL_BUILD --config Release
+if errorlevel 1 exit 1
