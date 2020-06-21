@@ -2,7 +2,7 @@
 
 - 创建环境
 ```
-conda env create -n openblas -f environment.openblas.yml
+conda env create -n openblas -f environment-openblas-fixed.yml
 ```
 
 - 完成后，拷贝一些文件
